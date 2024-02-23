@@ -12,7 +12,6 @@ class GysSpider(scrapy.Spider):
     start_urls = ['https://www.fupin832.com/pages/mapSearch']
 
     def parse(self, response):
-        print(response.encoding)
         selectors = response.xpath('//div[@class="main_box6_right"]/div')
         print(len(selectors))
         for selector in selectors:
